@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memoria | Privacy Policy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .docs-container {
+            max-width: 800px;
+            margin: 140px auto 100px;
+            padding: 0 24px;
+        }
+        .docs-container h1 {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+        }
+        .docs-container h2 {
+            font-size: 1.5rem;
+            margin-top: 48px;
+            margin-bottom: 16px;
+            color: var(--fg-primary);
+        }
+        .docs-container p {
+            color: var(--fg-muted);
+            margin-bottom: 24px;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        .docs-container ul {
+            margin-left: 24px;
+            margin-bottom: 24px;
+            color: var(--fg-muted);
+            line-height: 1.7;
+        }
+        @media (max-width: 768px) {
+            .docs-container { margin: 100px auto 60px; padding: 0 16px; }
+            .docs-container h1 { font-size: 2rem; }
+            .footer-content { flex-direction: column; justify-content: center; gap: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo" style="display:flex; align-items:center; gap:10px; cursor: pointer" onclick="window.location.href='index.html'">
+                <img src="logo.jpg" alt="Memoria Logo" style="height:36px; width:36px; border-radius:8px;">
+                Memoria
+            </div>
+            <div class="nav-links">
+                <a href="index.html" style="font-weight: 500; color: var(--fg-default);">← Back to Home</a>
+                <a href="index.html#how-it-works">How It Works</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#pricing">Pricing</a>
+            </div>
+            <div class="nav-auth">
+                <a href="index.html#login" class="btn-ghost">Log in</a>
+                <a href="index.html#pricing" class="btn-primary">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="docs-container">
+        <h1>Privacy Policy</h1>
+        <p>Last updated: August 2026</p>
+
+        <h2>1. INTRODUCTION</h2>
+        <p>Welcome to Memoria. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you as to how we look after your personal data when you visit our website, memoria-proxy.vercel.app (regardless of where you visit it from) and tell you about your privacy rights and how the law protects you.</p>
+
+        <h2>2. THE DATA WE COLLECT ABOUT YOU</h2>
+        <p>Personal data, or personal information, means any information about an individual from which that person can be identified. We may collect, use, store and transfer different kinds of personal data about you which we have grouped together follows:</p>
+        <ul>
+            <li><strong>Identity Data</strong> includes first name, last name, username or similar identifier.</li>
+            <li><strong>Contact Data</strong> includes email address and telephone numbers.</li>
+            <li><strong>Technical Data</strong> includes internet protocol (IP) address, your login data, browser type and version, time zone setting and location, browser plug-in types and versions, operating system and platform and other technology on the devices you use to access this website.</li>
+            <li><strong>Usage Data</strong> includes information about how you use our website, products and services.</li>
+        </ul>
+        <h2>3. PROMPTS, CACHING, AND LLM DATA</h2>
+        <p>As a hosted AI infrastructure proxy, transparency regarding your prompt data is our top priority:</p>
+        <ul>
+            <li><strong>Zero Training Policy:</strong> We strictly do not use your prompts, responses, or cached vectors to train, fine-tune, or improve any AI models.</li>
+            <li><strong>Data Retention & Caching:</strong> Cache data (semantic embeddings and responses) is stored securely in Memoria's infrastructure (PostgreSQL/Redis) only for a specified TTL (Time-To-Live) period. All data is encrypted at-rest and is strictly accessed for no other purpose than serving your cache hits.</li>
+            <li><strong>Upstream APIs & Encryption:</strong> Your API keys (e.g., OpenAI keys) are transparently passed to upstream providers. We protect your keys using AES-256 encryption at-rest. Additionally, we enforce Row Level Security (RLS) at the database layer as a robust access control mechanism to ensure keys are strictly isolated per user account. Please review the privacy policies of your upstream LLM providers for how they handle your prompts.</li>
+        </ul>
+
+        <h2>4. HOW WE USE YOUR PERSONAL DATA</h2>
+        <p>We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:</p>
+        <ul>
+            <li>Where we need to perform the contract we are about to enter into or have entered into with you.</li>
+            <li>Where it is necessary for our legitimate interests (or those of a third party) and your interests and fundamental rights do not override those interests.</li>
+            <li>Where we need to comply with a legal or regulatory obligation.</li>
+        </ul>
+
+        <h2>5. DATA SECURITY</h2>
+        <p>We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorised way, altered or disclosed. In addition, we limit access to your personal data to those employees, agents, contractors and other third parties who have a business need to know. They will only process your personal data on our instructions and they are subject to a duty of confidentiality.</p>
+        <p>Our database utilizes Row Level Security (RLS) to ensure that users can only access their own API keys, telemetry data, and profile information.</p>
+
+        <h2>6. DATA RETENTION</h2>
+        <p>We will only retain your personal data for as long as necessary to fulfil the purposes we collected it for, including for the purposes of satisfying any legal, accounting, or reporting requirements.</p>
+
+        <h2>7. YOUR LEGAL RIGHTS</h2>
+        <p>Under certain circumstances, you have rights under data protection laws in relation to your personal data, including the right to request access, correction, erasure, restriction, transfer, to object to processing, to portability of data and (where the lawful ground of processing is consent) to withdraw consent.</p>
+
+        <h2>8. CONTACT US</h2>
+        <p>If you have any questions about this privacy policy or our privacy practices, please contact us at <a href="mailto:daffaanan11@gmail.com" style="color:var(--brand-accent); text-decoration:none; font-weight:600;">daffaanan11@gmail.com</a>.</p>
+    </div>
+
+    <footer>
+        <div class="footer-content" style="max-width: 800px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding: 40px 24px; border-top: 1px solid var(--border-color); text-align: center;">
+            <div class="footer-brand" style="font-weight: 500; color: var(--fg-muted); display:flex; gap: 16px;">
+                <span>Memoria</span>
+                <a href="privacy.html" style="color:var(--brand-accent); text-decoration:none; font-size:0.9rem;">Privacy Policy</a>
+                <a href="tnc.html" style="color:var(--brand-accent); text-decoration:none; font-size:0.9rem;">Terms & Conditions</a>
+                <a href="mailto:daffaanan11@gmail.com" style="color:var(--brand-accent); text-decoration:none; font-size:0.9rem;">Contact Support</a>
+            </div>
+            <div class="footer-copy" style="font-size: 0.85rem; color: var(--fg-muted);">&copy; 2026 Memoria Inc. Built for performance.</div>
+        </div>
+    </footer>
+</body>
+</html>
